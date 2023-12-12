@@ -123,7 +123,6 @@ class Mesh:
 
     def remove_unnecessary_edges(self, mesh):
         mesh.select_set(True)
-        """
         for i in np.random.permutation(np.arange(self.nverts)):
             o_i, n_i, weight = self.o_field[i], self.normals[i], 0
             angles = []
@@ -148,7 +147,6 @@ class Mesh:
             angles = angles[angles[:,0].argsort()]
             for k in reversed(range(len(self.adjacency[i]) - 4)):
                 mesh.data.edges[int(angles[k][1])].select = True
-        """
 
 
 class ButtonOperator(bpy.types.Operator):
